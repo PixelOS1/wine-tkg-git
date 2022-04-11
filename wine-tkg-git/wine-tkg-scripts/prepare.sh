@@ -142,25 +142,6 @@ update_configure() {
 }
 
 _init() {
-msg2 '       .---.`               `.---.'
-msg2 '    `/syhhhyso-           -osyhhhys/`'
-msg2 '   .syNMdhNNhss/``.---.``/sshNNhdMNys.'
-msg2 '   +sdMh.`+MNsssssssssssssssNM+`.hMds+'
-msg2 '   :syNNdhNNhssssssssssssssshNNhdNNys:'
-msg2 '    /ssyhhhysssssssssssssssssyhhhyss/'
-msg2 '    .ossssssssssssssssssssssssssssso.'
-msg2 '   :sssssssssssssssssssssssssssssssss:'
-msg2 '  /sssssssssssssssssssssssssssssssssss/'
-msg2 ' :sssssssssssssoosssssssoosssssssssssss:'
-msg2 ' osssssssssssssoosssssssoossssssssssssso'
-msg2 ' osssssssssssyyyyhhhhhhhyyyyssssssssssso'
-msg2 ' /yyyyyyhhdmmmmNNNNNNNNNNNmmmmdhhyyyyyy/'
-msg2 '  smmmNNNNNNNNNNNNNNNNNNNNNNNNNNNNNmmms'
-msg2 '   /dNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNd/'
-msg2 '    `:sdNNNNNNNNNNNNNNNNNNNNNNNNNds:`'
-msg2 '       `-+shdNNNNNNNNNNNNNNNdhs+-`'
-msg2 '             `.-:///////:-.`'
-msg2 ''
 
   # load default configuration from files
   if [ -e "$_where"/proton_tkg_token ]; then
@@ -1562,6 +1543,16 @@ EOM
 	# _fsync_futex_waitv depends on fsync
 	if [ "$_fsync_futex_waitv" = "true" ] && ( cd "${srcdir}"/"${_winesrcdir}" && git merge-base --is-ancestor 0c249e6125fc9dc6ee86b4ef6ae0d9fa2fc6291b HEAD ); then
 	  _use_fsync="true"
+	fi
+
+
+	# _nvidia
+	if ["$_use_staging" = "true"] && ( cd "${srcdir}"/"${_stgsrcdir}" && git merge-base --is-ancestor 05d5df3292d6ae3ad5b2fa540bedbc011285c4d3 HEAD ); then
+	  _patchname='0001-nvencodeapi-First-implementation.patch' && _patchmsg="Applied NVEnc patch 1" && nonuser_patcher
+	fi
+
+	if ["$_use_staging" = "true"] && ( cd "${srcdir}"/"${_stgsrcdir}" && git merge-base --is-ancestor 279a1c527003811333646bcb827fda38618d8f21 HEAD ); then
+	  _patchname='0003-nvencodeapi-Add-support-for-version-6.0.patch' && _patchmsg="Applied NVEnc patch 2" && nonuser_patcher
 	fi
 
 	# fsync - experimental replacement for esync introduced with Proton 4.11-1
