@@ -1953,11 +1953,6 @@ EOM
 	  _patchname='enable_stg_shared_mem_def.patch' && _patchmsg="Enable STAGING_SHARED_MEMORY by default" && nonuser_patcher
 	fi
 
-	# Nvidia hate - Prevents building of nvapi/nvapi64, nvcuda, nvcuvid and nvencodeapi/nvencodeapi64 libs
-	if [ "$_nvidia_hate" = "true" ] && [ "$_use_staging" = "true" ]; then
-	  _patchname='nvidia-hate.patch' && _patchmsg="Hatin' on novideo" && nonuser_patcher
-	fi
-
 	# Revert moving various funcs to kernelbase & ntdll to fix some dll loading issues and ntdll crashes (with Cemu and Blizzard games notably)
 	if [ "$_kernelbase_reverts" = "true" ] || [ "$_EXTERNAL_INSTALL" = "proton" ] && [ "$_unfrog" != "true" ] && git merge-base --is-ancestor 8d25965e12717b266f2fc74bb10d915234d16772 HEAD && ! git merge-base --is-ancestor b7db0b52cee65a008f503ce727befcad3ba8d28a HEAD; then
 	  if git merge-base --is-ancestor 461b5e56f95eb095d97e4af1cb1c5fd64bb2862a HEAD; then
@@ -3072,17 +3067,17 @@ _polish() {
 	  if [ "$_untag" != "true" ]; then
 	    if [ "$_use_staging" = "true" ] && [ "$_LOCAL_PRESET" != "staging" ]; then
 	      if ( cd "${srcdir}"/"${_winesrcdir}" && git merge-base --is-ancestor 0c249e6125fc9dc6ee86b4ef6ae0d9fa2fc6291b HEAD ); then
-	        _patchname='wine-tkg-staging.patch' && _patchmsg="Please don't report bugs about this wine build on winehq.org and use https://github.com/Frogging-Family/wine-tkg-git/issues instead." && nonuser_patcher
+	        _patchname='wine-tkg-staging.patch' && _patchmsg="Please don't report bugs about this wine build on winehq.org and use https://pixelos.com instead." && nonuser_patcher
 	      else
-	        _patchname='wine-tkg-staging-0c249e6.patch' && _patchmsg="Please don't report bugs about this wine build on winehq.org and use https://github.com/Frogging-Family/wine-tkg-git/issues instead." && nonuser_patcher
+	        _patchname='wine-tkg-staging-0c249e6.patch' && _patchmsg="Please don't report bugs about this wine build on winehq.org and use https://pixelos.com instead." && nonuser_patcher
 	      fi
 	    elif [ "$_use_staging" != "true" ] && [ "$_LOCAL_PRESET" != "mainline" ]; then
 	      if ( cd "${srcdir}"/"${_winesrcdir}" && git merge-base --is-ancestor 0c249e6125fc9dc6ee86b4ef6ae0d9fa2fc6291b HEAD ); then
-	        _patchname='wine-tkg.patch' && _patchmsg="Please don't report bugs about this wine build on winehq.org and use https://github.com/Frogging-Family/wine-tkg-git/issues instead." && nonuser_patcher
+	        _patchname='wine-tkg.patch' && _patchmsg="Please don't report bugs about this wine build on winehq.org and use https://pixelos.com instead." && nonuser_patcher
 	      elif git merge-base --is-ancestor c7760ce7a247eeb9f15b51d0ec68ca0961efc0b0 HEAD; then
-	        _patchname='wine-tkg-0c249e6.patch' && _patchmsg="Please don't report bugs about this wine build on winehq.org and use https://github.com/Frogging-Family/wine-tkg-git/issues instead." && nonuser_patcher
+	        _patchname='wine-tkg-0c249e6.patch' && _patchmsg="Please don't report bugs about this wine build on winehq.org and use https://pixelos.com instead." && nonuser_patcher
 	      else
-	        _patchname='wine-tkg-c7760ce.patch' && _patchmsg="Please don't report bugs about this wine build on winehq.org and use https://github.com/Frogging-Family/wine-tkg-git/issues instead." && nonuser_patcher
+	        _patchname='wine-tkg-c7760ce.patch' && _patchmsg="Please don't report bugs about this wine build on winehq.org and use https://pixelos.com instead." && nonuser_patcher
 	      fi
 	    fi
 	  fi

@@ -276,7 +276,6 @@ source=("$_winesrcdir"::"${_winesrctarget}${_plain_commit}"
 # 		'winevulkan-1.1.103.patch' # Update winevulkan
 # 		'winevulkan-1.1.113.patch' # Update winevulkan
 # 		'high-core-count-fix.patch' # High core count setup fix for <=4.0
-# 		'nvidia-hate.patch' # novideo hate patch to disable nvapi, nvcuda etc.
 # 		'virtual_desktop_refreshrate.patch' # Add custom fake refreshrate to virtual desktop
 # 		'0001-kernelbase-Remove-DECLSPEC_HOTPATCH-from-SetThreadSt.patch' # Native dotnet workaround for 4.13+
 # 		'usvfs.patch' # USVFS (Mod Organizer 2's virtual filesystem) patch

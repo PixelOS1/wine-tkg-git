@@ -555,7 +555,7 @@ elif [ "$_proton_fs_hack" != "true" ] || [ "$_use_staging" != "true" ] && [ "$_p
   fi
 fi
 
-# 7b233f3032e4850b0f387faef4aae5ed6d5175de breaks at least Among Us - Revert - https://github.com/Frogging-Family/wine-tkg-git/issues/709
+# 7b233f3032e4850b0f387faef4aae5ed6d5175de breaks at least Among Us - Revert - https://pixelos.com/709
 # Fixed along the way, possibly with 1b9d48a (not bisected)
 if ( cd "${srcdir}"/"${_winesrcdir}" && git merge-base --is-ancestor 7b233f3032e4850b0f387faef4aae5ed6d5175de HEAD && ! git merge-base --is-ancestor 1b9d48a7b01e2b715af46bc1f8d5fe6f1529782c HEAD ); then
   warning "Hotfix: Revert 7b233f3, allowing Among Us to run again"
@@ -917,7 +917,7 @@ fi
 #  _hotfixes+=("$_where"/wine-tkg-patches/hotfixes/a70c517/networking_fix)
 #fi
 
-# 737fe1f introduced a regression for some, resulting in high CPU usage due to network handling. Workaround by openglfreak for a757701+ - https://github.com/Frogging-Family/wine-tkg-git/issues/407
+# 737fe1f introduced a regression for some, resulting in high CPU usage due to network handling. Workaround by openglfreak for a757701+ - https://pixelos.com/407
 if ( cd "${srcdir}"/"${_winesrcdir}" && git merge-base --is-ancestor 737fe1f99337ab999cf67fb1acdf96f70020b3d4 HEAD && ! git merge-base --is-ancestor 361435f6095f8c759979600b06ed28785e7b3aec HEAD ); then
   if ( [ "$_hotfixes_no_confirm" != "true" ] && [ "$_hotfixes_no_confirm" != "ignore" ] ) || [ "$_EXTERNAL_INSTALL" = "proton" ]; then
     msg2 ""

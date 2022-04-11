@@ -27,16 +27,3 @@ wine-tkg-git/dxvk/
 wine-tkg-git/d9vk/
 wine-tkg-git/non-makepkg-builds/
 wine-tkg-git/proton_dist/
-proton-tkg/Proton/
-proton-tkg/liberation-fonts/
-proton-tkg/vkd3d-fork-build/
-proton-tkg/vkd3d-proton/
-proton-tkg/proton_template/share/fonts/
-proton-tkg/dxvk/
-proton-tkg/dxvk-tools/
-proton-tkg/d9vk/
-proton-tkg/mono/
-proton-tkg/gecko/
-proton-tkg/proton_tkg_token
-proton-tkg/external-resources
-proton-tkg/gst/

@@ -20,24 +20,22 @@ if [ -f "/etc/debian_version" ]; then
 fi
 
 cat << 'EOM'
-       .---.`               `.---.
-    `/syhhhyso-           -osyhhhys/`
-   .syNMdhNNhss/``.---.``/sshNNhdMNys.
-   +sdMh.`+MNsssssssssssssssNM+`.hMds+
-   :syNNdhNNhssssssssssssssshNNhdNNys:
-    /ssyhhhysssssssssssssssssyhhhyss/
-    .ossssssssssssssssssssssssssssso.
-   :sssssssssssssssssssssssssssssssss:
-  /sssssssssssssssssssssssssssssssssss/
- :sssssssssssssoosssssssoosssssssssssss:
- osssssssssssssoosssssssoossssssssssssso
- osssssssssssyyyyhhhhhhhyyyyssssssssssso
- /yyyyyyhhdmmmmNNNNNNNNNNNmmmmdhhyyyyyy/
-  smmmNNNNNNNNNNNNNNNNNNNNNNNNNNNNNmmms
-   /dNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNd/
-    `:sdNNNNNNNNNNNNNNNNNNNNNNNNNds:`
-       `-+shdNNNNNNNNNNNNNNNdhs+-`
-             `.-:///////:-.`
+                                        
+                --+.         .          
+                +++-       .   : .      
+                +++-  - -:.- : .        
+          .-=+  +++- = .- -- -: -       
+        :=+++=  +++- =++-= -..  =-      
+       =+++:    -+=.   .:+::.:  .       
+      =++-               :.--           
+     -++=                 =+*-          
+     =++:                 :**=          
+     =++:                 :**=          
+     :+++                 +**:          
+      -++=.             .+**-           
+       :+++-.         .=**+:            
+         -++++==---==+**+-              
+           .-=++***++=-.                
 
 EOM
 
