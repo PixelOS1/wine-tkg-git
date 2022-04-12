@@ -1546,15 +1546,15 @@ EOM
 	fi
 
 	# _nvidia pixelos
-	if ( cd "${srcdir}"/"${_stgsrcdir}" && git merge-base --is-ancestor ef11bb63ce54490bc5a1e14ab650207b515340da HEAD ); then
-		_patchname='0001-nvencodeapi-First-implementation.patch' && _patchmsg="Applied NVEnc patch 1" && nonuser_patcher
-		echo "PixelOS patched NVEnc 1" >> "$_where"/last_build_config.log
-	fi
+	#if ( cd "${srcdir}"/"${_stgsrcdir}" && git merge-base --is-ancestor ef11bb63ce54490bc5a1e14ab650207b515340da HEAD ); then
+	#	_patchname='0001-nvencodeapi-First-implementation.patch' && _patchmsg="Applied NVEnc patch 1" && nonuser_patcher
+	#	echo "PixelOS patched NVEnc 1" >> "$_where"/last_build_config.log
+	#fi
 
-	if ( cd "${srcdir}"/"${_stgsrcdir}" && git merge-base --is-ancestor ef11bb63ce54490bc5a1e14ab650207b515340da HEAD ); then
-		_patchname='0003-nvencodeapi-Add-support-for-version-6.0.patch' && _patchmsg="Applied NVEnc patch 2" && nonuser_patcher
-		echo "PixelOS patched NVEnc 2" >> "$_where"/last_build_config.log
-	fi
+	#if ( cd "${srcdir}"/"${_stgsrcdir}" && git merge-base --is-ancestor ef11bb63ce54490bc5a1e14ab650207b515340da HEAD ); then
+	#	_patchname='0003-nvencodeapi-Add-support-for-version-6.0.patch' && _patchmsg="Applied NVEnc patch 2" && nonuser_patcher
+	#	echo "PixelOS patched NVEnc 2" >> "$_where"/last_build_config.log
+	#fi
 
 	# fsync - experimental replacement for esync introduced with Proton 4.11-1
 	if [ "$_use_fsync" = "true" ]; then
