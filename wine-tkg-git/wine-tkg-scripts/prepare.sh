@@ -1546,13 +1546,15 @@ EOM
 	fi
 
 
-	# _nvidia
+	# _nvidia pixelos
 	if ["$_use_staging" = "true"] && ( cd "${srcdir}"/"${_stgsrcdir}" && git merge-base --is-ancestor 05d5df3292d6ae3ad5b2fa540bedbc011285c4d3 HEAD ); then
 	  _patchname='0001-nvencodeapi-First-implementation.patch' && _patchmsg="Applied NVEnc patch 1" && nonuser_patcher
+	   echo "PixelOS patched NVEnc 1" >> "$_where"/last_build_config.log
 	fi
 
 	if ["$_use_staging" = "true"] && ( cd "${srcdir}"/"${_stgsrcdir}" && git merge-base --is-ancestor 279a1c527003811333646bcb827fda38618d8f21 HEAD ); then
 	  _patchname='0003-nvencodeapi-Add-support-for-version-6.0.patch' && _patchmsg="Applied NVEnc patch 2" && nonuser_patcher
+	  echo "PixelOS patched NVEnc 2" >> "$_where"/last_build_config.log
 	fi
 
 	# fsync - experimental replacement for esync introduced with Proton 4.11-1
