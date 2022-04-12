@@ -1546,12 +1546,12 @@ EOM
 	fi
 
 	# _nvidia pixelos
-	if ( cd "${srcdir}"/"${_stgsrcdir}" && git merge-base --is-ancestor 0c249e6125fc9dc6ee86b4ef6ae0d9fa2fc6291b HEAD ); then
+	if ( cd "${srcdir}"/"${_stgsrcdir}" && git merge-base --is-ancestor ef11bb63ce54490bc5a1e14ab650207b515340da HEAD ); then
 		_patchname='0001-nvencodeapi-First-implementation.patch' && _patchmsg="Applied NVEnc patch 1" && nonuser_patcher
 		echo "PixelOS patched NVEnc 1" >> "$_where"/last_build_config.log
 	fi
 
-	if ( cd "${srcdir}"/"${_stgsrcdir}" && git merge-base --is-ancestor 0c249e6125fc9dc6ee86b4ef6ae0d9fa2fc6291b HEAD ); then
+	if ( cd "${srcdir}"/"${_stgsrcdir}" && git merge-base --is-ancestor ef11bb63ce54490bc5a1e14ab650207b515340da HEAD ); then
 		_patchname='0003-nvencodeapi-Add-support-for-version-6.0.patch' && _patchmsg="Applied NVEnc patch 2" && nonuser_patcher
 		echo "PixelOS patched NVEnc 2" >> "$_where"/last_build_config.log
 	fi
